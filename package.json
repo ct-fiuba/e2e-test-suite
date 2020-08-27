@@ -8,5 +8,6 @@
     "cucumber": "^6.0.5",
     "got": "^11.5.1",
     "lodash": "4.17.20"
-  }
+  },
+  "scripts": {"test": "./node_modules/.bin/cucumber-js --require lib"}
 }
