@@ -3,7 +3,7 @@ Feature: Establishments
 
   Scenario: Create a valid establishment
     Given the system is up and running
-    And the establishment called "mc_donalds" characteristics:
+    And the establishment called "mc_donalds" has characteristics:
       | type    | restaurant          |
       | name    | Mc Donalds          |
       | email   | mcdonalds@gmail.com |
@@ -26,7 +26,7 @@ Feature: Establishments
 
   Scenario: Create an invalid establishment
     Given the system is up and running
-    And the establishment called "burger_king" characteristics:
+    And the establishment called "burger_king" has characteristics:
       | type    | restaurant          |
       | name    | Burger King         |
       | email   | mcdonalds@gmail.com |
@@ -45,7 +45,7 @@ Feature: Establishments
 
   Scenario: Create a valid establishment with 0 spaces
     Given the system is up and running
-    And the establishment called "mostaza" characteristics:
+    And the establishment called "mostaza" has characteristics:
       | type    | restaurant          |
       | name    | Mostaza             |
       | email   | mostaza@gmail.com   |
@@ -61,7 +61,7 @@ Feature: Establishments
 
   Scenario: Create a valid establishment with 2 spaces
     Given the system is up and running
-    And the establishment called "wunderbar" characteristics:
+    And the establishment called "wunderbar" has characteristics:
       | type    | restaurant          |
       | name    | Wunderbar           |
       | email   | wunderbar@gmail.com |
@@ -90,7 +90,7 @@ Feature: Establishments
 
   Scenario: Create two valid establishments
     Given the system is up and running
-    And the establishment called "mc_donalds" characteristics:
+    And the establishment called "mc_donalds" has characteristics:
       | type    | restaurant          |
       | name    | Mc Donalds          |
       | email   | mcdonalds@gmail.com |
@@ -105,7 +105,7 @@ Feature: Establishments
       | m2                     | 1000        |
       | estimatedVisitDuration | 60          |
       | openPlace              | false       |
-    And the establishment called "wunderbar" characteristics:
+    And the establishment called "wunderbar" has characteristics:
       | type    | restaurant          |
       | name    | Wunderbar           |
       | email   | wunderbar@gmail.com |
@@ -141,7 +141,7 @@ Feature: Establishments
 
   Scenario: Create a PDF from a invalid establishment
     Given the system is up and running
-    And the establishment called "burger_king" characteristics:
+    And the establishment called "burger_king" has characteristics:
       | type    | restaurant          |
       | name    | Burger King         |
       | email   | mcdonalds@gmail.com |
