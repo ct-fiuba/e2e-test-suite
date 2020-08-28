@@ -132,24 +132,8 @@ Feature: Establishments
 
   Scenario: Create a PDF from a valid establishment
     Given the system is up and running
-    And the establishment called "mc_donalds" characteristics:
-      | type    | restaurant          |
-      | name    | Mc Donalds          |
-      | email   | mcdonalds@gmail.com |
-      | address | Cabildo 1010        |
-      | city    | CABA                |
-      | state   | CABA                |
-      | zip     | 1430ACV             |
-      | country | Argentina           |
-    And "mc_donalds" has a space with characteristics:
-      | name                   | Primer piso |
-      | hasExit                | false       |
-      | m2                     | 1000        |
-      | estimatedVisitDuration | 60          |
-      | openPlace              | false       |
-    When the establishment "mc_donalds" is created
-    And the PDF for the establishment "mc_donalds" is requested
-    Then the status code for establishment "mc_donalds" creation is 201
+    And the establishment "mc_donalds" with a space exists
+    When the PDF for the establishment "mc_donalds" is requested
     And the status code for the PDF generation for "mc_donalds" is 200
     And the response for the PDF generation for "mc_donalds" has type application pdf
     And the response for the PDF generation for "mc_donalds" has an attachment
