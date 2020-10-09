@@ -23,3 +23,13 @@ Feature: Auth Server
     And we sign in with email "testing4@gmail.com" and password "pass1234"
     And we validate the access token of "testing4@gmail.com"
     Then the access token of "testing4@gmail.com" is valid
+
+  @cleanUsers
+  Scenario: Refresh Access Token
+    When the user with email "testing5@gmail.com" and password "pass1234" is created
+    And we sign in with email "testing5@gmail.com" and password "pass1234"
+    And we refresh the access token of "testing5@gmail.com"
+    And we validate the access token of "testing5@gmail.com"
+    Then the access token of "testing5@gmail.com" is refreshed
+    And the access token of "testing5@gmail.com" is valid
+    And the access token of "testing5@gmail.com" is different from the original one
