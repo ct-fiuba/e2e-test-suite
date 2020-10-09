@@ -16,3 +16,10 @@ Feature: Auth Server
     Given no user was created
     When we sign in with email "testing3@gmail.com" and password "pass1234"
     Then the user with email "testing3@gmail.com" does not exist
+
+  @cleanUsers
+  Scenario: Validate Access Token
+    When the user with email "testing4@gmail.com" and password "pass1234" is created
+    And we sign in with email "testing4@gmail.com" and password "pass1234"
+    And we validate the access token of "testing4@gmail.com"
+    Then the access token of "testing4@gmail.com" is valid
