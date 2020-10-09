@@ -40,3 +40,20 @@ Feature: Auth Server
     And we sign in with email "testing6@gmail.com" and password "pass1234"
     And we generate a genux token for "testing6@gmail.com"
     Then the genux token for "testing6@gmail.com" is created
+
+  @cleanUsers
+  Scenario: Use Genux Token
+    When the user with email "testing6@gmail.com" and password "pass1234" is created
+    And we sign in with email "testing6@gmail.com" and password "pass1234"
+    And we generate a genux token for "testing6@gmail.com"
+    And we use the genux token for "testing6@gmail.com"
+    Then the genux token for "testing6@gmail.com" is used correctly
+
+  @cleanUsers
+  Scenario: Use Genux Token twice
+    When the user with email "testing6@gmail.com" and password "pass1234" is created
+    And we sign in with email "testing6@gmail.com" and password "pass1234"
+    And we generate a genux token for "testing6@gmail.com"
+    And we use the genux token for "testing6@gmail.com"
+    And we use the genux token for "testing6@gmail.com"
+    Then the genux token for "testing6@gmail.com" is not used correctly
