@@ -33,3 +33,10 @@ Feature: Auth Server
     Then the access token of "testing5@gmail.com" is refreshed
     And the access token of "testing5@gmail.com" is valid
     And the access token of "testing5@gmail.com" is different from the original one
+
+  @cleanUsers
+  Scenario: Generate Genux Token
+    When the user with email "testing6@gmail.com" and password "pass1234" is created
+    And we sign in with email "testing6@gmail.com" and password "pass1234"
+    And we generate a genux token for "testing6@gmail.com"
+    Then the genux token for "testing6@gmail.com" is created
