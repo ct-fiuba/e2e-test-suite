@@ -6,7 +6,6 @@ Feature: Establishments
     Given the establishment called "mc_donalds" has characteristics:
       | type    | restaurant          |
       | name    | Mc Donalds          |
-      | email   | mcdonalds@gmail.com |
       | address | Cabildo 1010        |
       | city    | CABA                |
       | state   | CABA                |
@@ -29,7 +28,6 @@ Feature: Establishments
     Given the establishment called "burger_king" has characteristics:
       | type    | restaurant          |
       | name    | Burger King         |
-      | email   | mcdonalds@gmail.com |
       | zip     | 1430ACV             |
       | country | Argentina           |
     And "burger_king" has a space with characteristics:
@@ -48,7 +46,6 @@ Feature: Establishments
     Given the establishment called "mostaza" has characteristics:
       | type    | restaurant          |
       | name    | Mostaza             |
-      | email   | mostaza@gmail.com   |
       | address | Cabildo 1010        |
       | city    | CABA                |
       | state   | CABA                |
@@ -63,7 +60,6 @@ Feature: Establishments
     Given the establishment called "wunderbar" has characteristics:
       | type    | restaurant          |
       | name    | Wunderbar           |
-      | email   | wunderbar@gmail.com |
       | address | Cabildo 1010        |
       | city    | CABA                |
       | state   | CABA                |
@@ -93,7 +89,6 @@ Feature: Establishments
     Given the establishment called "mc_donalds" has characteristics:
       | type    | restaurant          |
       | name    | Mc Donalds          |
-      | email   | mcdonalds@gmail.com |
       | address | Cabildo 1010        |
       | city    | CABA                |
       | state   | CABA                |
@@ -109,7 +104,6 @@ Feature: Establishments
     And the establishment called "wunderbar" has characteristics:
       | type    | restaurant          |
       | name    | Wunderbar           |
-      | email   | wunderbar@gmail.com |
       | address | Cabildo 1010        |
       | city    | CABA                |
       | state   | CABA                |
@@ -144,7 +138,6 @@ Feature: Establishments
     Given the establishment called "burger_king" has characteristics:
       | type    | restaurant          |
       | name    | Burger King         |
-      | email   | mcdonalds@gmail.com |
       | zip     | 1430ACV             |
       | country | Argentina           |
     And "burger_king" has a space with characteristics:
