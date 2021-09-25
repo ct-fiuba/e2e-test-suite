@@ -92,3 +92,8 @@ Feature: Auth Server
     When we use the genux token for "testing8@gmail.com"
     And we use the genux token for "testing8@gmail.com"
     Then the user "useGenuxToken" of "testing8@gmail.com" resulted in "failure"
+
+  @cleanAdmins
+  Scenario: Log In with admin user
+    When the admin logs in
+    Then the admin "logIn" resulted in "success"
