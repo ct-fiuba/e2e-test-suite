@@ -29,7 +29,7 @@ Feature: Visits
     And we generate a genux token for "testing30@gmail.com"
     When the establishment "wunderbar2" is created
     And the user with email "testing30@gmail.com" visited the space from establishment "wunderbar2" 10 minutes ago
-    Then the status code for the visit of the user with email "testing30@gmail.com" is 201
+    Then the status code for the visit creation of the user with email "testing30@gmail.com" is 201
 
   @cleanEstablishments
   @cleanOwners
@@ -62,14 +62,14 @@ Feature: Visits
     When the establishment "wunderbar2" is created
     And the user with email "testing31@gmail.com" visited the space from establishment "wunderbar2" 15 minutes ago
     And the user with email "testing32@gmail.com" visited the space from establishment "wunderbar2" 10 minutes ago
-    Then the status code for the visit of the user with email "testing31@gmail.com" is 201
-    And the status code for the visit of the user with email "testing32@gmail.com" is 201
+    Then the status code for the visit creation of the user with email "testing31@gmail.com" is 201
+    And the status code for the visit creation of the user with email "testing32@gmail.com" is 201
 
   @cleanEstablishments
   @cleanOwners
   @cleanUsers
   @cleanVisits
-  Scenario: Create a valid visit
+  Scenario: Add exit timestamp to a visit
     Given the owner with email "owner_e2e_33@gmail.com" and password "owner33" was created
     And the establishment called "wunderbar2" has characteristics:
       | type    | restaurant          |
@@ -92,4 +92,6 @@ Feature: Visits
     And we generate a genux token for "testing33@gmail.com"
     When the establishment "wunderbar2" is created
     And the user with email "testing33@gmail.com" visited the space from establishment "wunderbar2" 60 minutes ago
-    Then the status code for the visit of the user with email "testing33@gmail.com" is 201
+    And the user with email "testing33@gmail.com" closed the visit to the space from establishment "wunderbar2" 30 minutes ago
+    Then the status code for the visit creation of the user with email "testing33@gmail.com" is 201
+    Then the status code for the visit exit of the user with email "testing33@gmail.com" is 201
