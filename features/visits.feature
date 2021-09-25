@@ -28,7 +28,12 @@ Feature: Visits
     And the user log in with email "testing30@gmail.com" and password "pass1234"
     And we generate a genux token for "testing30@gmail.com"
     When the establishment "wunderbar2" is created
-    And the user with email "testing30@gmail.com" visited the space from establishment "wunderbar2" 10 minutes ago
+    And the user with email "testing30@gmail.com" visited the space from establishment "wunderbar2" 10 minutes ago with user data:
+      | vaccinated             | 1           |
+      | covidRecovered         | true        |
+      | vaccinatedDate         | 01/01/2021  |
+      | covidRecoveredDate     | 01/05/2021  |
+      | vacccineReceived       | AstraZeneca |
     Then the status code for the visit creation of the user with email "testing30@gmail.com" is 201
 
   @cleanEstablishments
@@ -60,8 +65,15 @@ Feature: Visits
     And the user log in with email "testing32@gmail.com" and password "pass1234"
     And we generate a genux token for "testing32@gmail.com"
     When the establishment "wunderbar2" is created
-    And the user with email "testing31@gmail.com" visited the space from establishment "wunderbar2" 15 minutes ago
-    And the user with email "testing32@gmail.com" visited the space from establishment "wunderbar2" 10 minutes ago
+    And the user with email "testing31@gmail.com" visited the space from establishment "wunderbar2" 15 minutes ago with user data:
+      | vaccinated             | 1           |
+      | covidRecovered         | true        |
+      | vaccinatedDate         | 01/01/2021  |
+      | covidRecoveredDate     | 01/05/2021  |
+      | vacccineReceived       | AstraZeneca |
+    And the user with email "testing32@gmail.com" visited the space from establishment "wunderbar2" 10 minutes ago with user data:
+      | vaccinated             | 0           |
+      | covidRecovered         | false       |
     Then the status code for the visit creation of the user with email "testing31@gmail.com" is 201
     And the status code for the visit creation of the user with email "testing32@gmail.com" is 201
 
@@ -91,7 +103,11 @@ Feature: Visits
     And the user log in with email "testing33@gmail.com" and password "pass1234"
     And we generate a genux token for "testing33@gmail.com"
     When the establishment "wunderbar2" is created
-    And the user with email "testing33@gmail.com" visited the space from establishment "wunderbar2" 60 minutes ago
-    And the user with email "testing33@gmail.com" closed the visit to the space from establishment "wunderbar2" 30 minutes ago
+    And the user with email "testing33@gmail.com" visited the space from establishment "wunderbar2" 60 minutes ago with user data:
+      | vaccinated             | 0           |
+      | covidRecovered         | false       |
+    And the user with email "testing33@gmail.com" closed the visit to the space from establishment "wunderbar2" 30 minutes ago with user data:
+      | vaccinated             | 0           |
+      | covidRecovered         | false       |
     Then the status code for the visit creation of the user with email "testing33@gmail.com" is 201
     Then the status code for the visit exit of the user with email "testing33@gmail.com" is 201
