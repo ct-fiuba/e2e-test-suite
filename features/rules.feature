@@ -1,9 +1,9 @@
 @ct-api
 @auth-server
-Feature: Visits
+Feature: Rules
 
   @cleanRules
-  Scenario: Create a valid visit
+  Scenario: Create a valid rule
     When the admin logs in
     And a new rule identified by the name "rule1" is created with fields:
       | index                     | 1                  |
@@ -22,7 +22,7 @@ Feature: Visits
     Then the status code for the rule "rule1" creation is 201
 
   @cleanRules
-  Scenario: Create a valid visit with not all the conditions
+  Scenario: Create a valid rule with not all the conditions
     When the admin logs in
     And a new rule identified by the name "rule2" is created with fields:
       | index                     | 1                  |
