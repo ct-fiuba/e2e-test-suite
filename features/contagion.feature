@@ -51,11 +51,6 @@ Feature: Contagion
     And we generate a genux token for "testing40@gmail.com"
     And the user with email "testing40@gmail.com" exposes their codes as infected
     And we wait until the contagion updater runs
-    And we wait until the contagion updater runs
-    And we wait until the contagion updater runs
-    And we wait until the contagion updater runs
-    And we wait until the contagion updater runs
-    And we wait until the contagion updater runs
     And the user "testing41@gmail.com" gets the billboard of compromised codes
     Then the status code for the visit creation of the user with email "testing40@gmail.com" is 201
     And the status code for the visit creation of the user with email "testing41@gmail.com" is 201

@@ -106,6 +106,7 @@ Feature: Visits
     And the user with email "testing33@gmail.com" visited the space from establishment "wunderbar2" 60 minutes ago with user data:
       | vaccinated             | 0           |
       | covidRecovered         | false       |
+    And we generate a genux token for "testing33@gmail.com"
     And the user with email "testing33@gmail.com" closed the visit to the space from establishment "wunderbar2" 30 minutes ago with user data:
       | vaccinated             | 0           |
       | covidRecovered         | false       |
