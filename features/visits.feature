@@ -21,7 +21,7 @@ Feature: Visits
       | hasExit                | true        |
       | m2                     | 10          |
       | estimatedVisitDuration | 60          |
-      | openPlace              | false       |
+      | openSpace              | false       |
       | n95Mandatory           | false       |
     And the owner with email "owner_e2e_30@gmail.com" owns the establishment "wunderbar2"
     And the user with email "testing30@gmail.com", DNI "40404040" and password "pass1234" was created
@@ -55,7 +55,7 @@ Feature: Visits
       | hasExit                | true        |
       | m2                     | 10          |
       | estimatedVisitDuration | 60          |
-      | openPlace              | false       |
+      | openSpace              | false       |
       | n95Mandatory           | false       |
     And the owner with email "owner_e2e_31@gmail.com" owns the establishment "wunderbar2"
     And the user with email "testing31@gmail.com", DNI "40404040" and password "pass1234" was created
@@ -96,7 +96,7 @@ Feature: Visits
       | hasExit                | true        |
       | m2                     | 10          |
       | estimatedVisitDuration | 60          |
-      | openPlace              | false       |
+      | openSpace              | false       |
       | n95Mandatory           | false       |
     And the owner with email "owner_e2e_33@gmail.com" owns the establishment "wunderbar2"
     And the user with email "testing33@gmail.com", DNI "40404040" and password "pass1234" was created

@@ -12,7 +12,7 @@ Feature: Rules
       | durationValue             | 20                 |
       | m2Cmp                     | >                  |
       | m2Value                   | 30                 |
-      | spaceValue                | Abierto            |
+      | openSpace                 | true               |
       | n95Mandatory              | false              |
       | vaccinated                | 2                  |
       | vaccinatedDaysAgoMin      | 21                 |

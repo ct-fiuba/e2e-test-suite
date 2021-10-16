@@ -23,7 +23,7 @@ Feature: Contagion
       | hasExit                | true        |
       | m2                     | 10          |
       | estimatedVisitDuration | 60          |
-      | openPlace              | false       |
+      | openSpace              | false       |
       | n95Mandatory           | false       |
     And the owner with email "owner_e2e_33@gmail.com" owns the establishment "wunderbar2"
     And the user with email "testing40@gmail.com", DNI "40404040" and password "pass1234" was created
@@ -79,7 +79,7 @@ Feature: Contagion
       | hasExit                | true        |
       | m2                     | 100         |
       | estimatedVisitDuration | 60          |
-      | openPlace              | false       |
+      | openSpace              | false       |
       | n95Mandatory           | false       |
     And the owner with email "owner_e2e_34@gmail.com" owns the establishment "wunderbar2"
     And the user with email "testing42@gmail.com", DNI "40404040" and password "pass1234" was created
@@ -135,7 +135,7 @@ Feature: Contagion
       | hasExit                | true        |
       | m2                     | 100         |
       | estimatedVisitDuration | 60          |
-      | openPlace              | false       |
+      | openSpace              | false       |
       | n95Mandatory           | false       |
     And the owner with email "owner_e2e_35@gmail.com" owns the establishment "wunderbar2"
     And the user with email "testing44@gmail.com", DNI "40404040" and password "pass1234" was created
@@ -191,7 +191,7 @@ Feature: Contagion
       | hasExit                | true        |
       | m2                     | 25          |
       | estimatedVisitDuration | 60          |
-      | openPlace              | false       |
+      | openSpace              | false       |
       | n95Mandatory           | false       |
     And the owner with email "owner_e2e_36@gmail.com" owns the establishment "wunderbar2"
     And the user with email "testing46@gmail.com", DNI "40404040" and password "pass1234" was created
