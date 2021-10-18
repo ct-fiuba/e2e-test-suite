@@ -19,7 +19,7 @@ Feature: Establishments
       | hasExit                | false       |
       | m2                     | 1000        |
       | estimatedVisitDuration | 60          |
-      | openPlace              | false       |
+      | openSpace              | false       |
       | n95Mandatory           | false       |
     And the owner with email "owner_e2e_2@gmail.com" owns the establishment "mc_donalds"
     When the establishment "mc_donalds" is created
@@ -41,7 +41,7 @@ Feature: Establishments
       | hasExit                | false       |
       | m2                     | 1000        |
       | estimatedVisitDuration | 60          |
-      | openPlace              | false       |
+      | openSpace              | false       |
       | n95Mandatory           | false       |
     And the owner with email "owner_e2e_3@gmail.com" owns the establishment "burger_king"
     When the establishment "burger_king" is created
@@ -82,14 +82,14 @@ Feature: Establishments
       | hasExit                | false       |
       | m2                     | 1000        |
       | estimatedVisitDuration | 60          |
-      | openPlace              | false       |
+      | openSpace              | false       |
       | n95Mandatory           | false       |
     And "wunderbar" has a space with characteristics:
       | name                   | Segundo piso |
       | hasExit                | false        |
       | m2                     | 500          |
       | estimatedVisitDuration | 45           |
-      | openPlace              | true         |
+      | openSpace              | true         |
       | n95Mandatory           | false        |
     And the owner with email "owner_e2e_5@gmail.com" owns the establishment "wunderbar"
     When the establishment "wunderbar" is created
@@ -114,7 +114,7 @@ Feature: Establishments
       | hasExit                | false       |
       | m2                     | 1000        |
       | estimatedVisitDuration | 60          |
-      | openPlace              | false       |
+      | openSpace              | false       |
       | n95Mandatory           | false       |
     And the establishment called "wunderbar" has characteristics:
       | type    | restaurant          |
@@ -129,7 +129,7 @@ Feature: Establishments
       | hasExit                | false       |
       | m2                     | 1000        |
       | estimatedVisitDuration | 60          |
-      | openPlace              | false       |
+      | openSpace              | false       |
       | n95Mandatory           | false       |
     And the owner with email "owner_e2e_6@gmail.com" owns the establishment "mc_donalds"
     And the owner with email "owner_e2e_6@gmail.com" owns the establishment "wunderbar"
@@ -166,7 +166,7 @@ Feature: Establishments
       | hasExit                | false       |
       | m2                     | 1000        |
       | estimatedVisitDuration | 60          |
-      | openPlace              | false       |
+      | openSpace              | false       |
       | n95Mandatory           | false       |
     And the owner with email "owner_e2e_8@gmail.com" owns the establishment "burger_king"
     When the establishment "burger_king" is created
