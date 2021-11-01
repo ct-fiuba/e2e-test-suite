@@ -12,13 +12,13 @@ Feature: Rules
       | durationValue             | 20                 |
       | m2Cmp                     | >                  |
       | m2Value                   | 30                 |
-      | spaceValue                | Abierto            |
+      | openSpace                 | true               |
       | n95Mandatory              | false              |
       | vaccinated                | 2                  |
       | vaccinatedDaysAgoMin      | 21                 |
       | vaccineReceived           | AstraZeneca        |
-      | covidRecovered            | true               |
-      | covidRecoveredDaysAgoMax  | 90                 |
+      | illnessRecovered            | true               |
+      | illnessRecoveredDaysAgoMax  | 90                 |
     Then the status code for the rule "rule1" creation is 201
 
   @cleanRules
